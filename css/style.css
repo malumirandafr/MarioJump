@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.info {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.game-board {
+    width: 100%;
+    height: 600px;
+  
+    margin: 0 auto;
+    position: relative; 
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 68px;
+    width: 80px;
+    height: 80px;
+    right: -80px; 
+    
+}
+
+.pipeanimation {
+   
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario {
+    position: absolute;
+    width: 150px;
+    bottom: 68px;
+}
+
+.jump {
+    animation: jump 500ms ease-out; 
+}
+
+.jumpphone {
+    animation: jumpPhoneScreen 500ms ease-out; 
+}
+
+.clouds {
+    position: absolute;
+    width: 500px;
+    animation: clouds-animation 22.5s infinite linear;
+}
+
+.floor {
+    position: absolute;
+    bottom: 0;
+}
+
+.gameover {
+    position: absolute;
+    font-family: 'Stencil', Arial, Helvetica, sans-serif;
+    color: #ff0000bb;
+    font-weight: 700;
+    font-size: 3em;
+   
+    top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.points {
+    position: absolute;
+    font-family: 'Stencil', Arial, Helvetica, sans-serif;
+    color: rgba(255, 0, 0, 0.733);
+    font-weight: 700;
+    font-size: 3em;
+    left: 10px;
+    text-shadow: #87CEEB 2px 3px 2px;
+}
+
+.time {
+    position: absolute;
+    font-family: 'Stencil', Arial, Helvetica, sans-serif;
+    color: rgba(255, 0, 0, 0.733);
+    font-weight: 700;
+    font-size: 3em;
+    right: 10px;
+}
+
+
+@keyframes pipe-animation {
+    
+    from {
+        right: 0;
+        
+    }
+ 
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump{
+    0% {
+        bottom: 68px;
+    }
+    40% {
+        bottom: 249px;
+    }
+    50% {
+        bottom: 249px;
+    }
+    60% {
+        bottom: 249px;
+    }
+    100% {
+        bottom: 68px;
+    }
+}
+
+@keyframes jumpPhoneScreen{
+    0% {
+        bottom: 24px;
+    }
+    40% {
+        bottom: 95px;
+    }
+    50% {
+        bottom: 95px;
+    }
+    60% {
+        bottom: 95px;
+    }
+    100% {
+        bottom: 24px;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
